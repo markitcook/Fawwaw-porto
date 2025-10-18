@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Progress animation */
+@keyframes slideProgress {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(250 91% 60%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 10%), hsl(0 0% 12%));
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent;
+  }
+  
+  .card-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}

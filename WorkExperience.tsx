@@ -40,13 +40,13 @@ const WorkExperience = () => {
                       </h3>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Briefcase className="h-4 w-4" />
-                        <span className="text-sm md:text-base font-medium">Developer</span>
+                        <span className="text-sm md:text-base font-medium">Manager</span>
                       </div>
                     </div>
                   </div>
 
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Working as a developer at Nathub, contributing to innovative projects and building cutting-edge web solutions.
+                    Working as a Manager at Nathub, contributing to innovative projects and building cutting-edge web solutions.
                   </p>
 
                   {/* Skills/Tags */}
